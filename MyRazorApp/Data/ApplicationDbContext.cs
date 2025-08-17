@@ -13,16 +13,13 @@ public class ApplicationDbContext : DbContext
 }
 
 // API Keys Table
-[Table("api_keys")]
 public class ApiKeys
 {
     // Unique ID
     [Key]
-    [Column("api_key_id")]
     public int Id { get; set; }
 
     // API Key
-    [Column("api_key")]
     [Required]
     public string Key { get; set; } = default!;
 }
